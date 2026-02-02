@@ -1,0 +1,24 @@
+// Function Call Example
+
+int add(int a, int b) {
+    return a + b;
+}
+
+int double_val(int n) {
+    // Nested call
+    return add(n, n);
+}
+
+int main() {
+    int res = 0;
+    
+    // Simple call
+    // res = add(10, 20);
+    // asm("PRINT R0"); // Should print 30
+    
+    // Nested call
+    res = double_val(5);
+    asm("PRINT R0"); // Should print 10
+    
+    asm("HALT");
+}

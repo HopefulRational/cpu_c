@@ -1,0 +1,11 @@
+# Memory Access Test
+# Demonstrates: STORE, LD, Memory Hierarchy
+
+LOAD R0, 12345
+STORE R0, 0x0500  # Write to memory (Should miss L1D, miss L2, write to Mem)
+
+LOAD R1, 0        # Clear R1
+LD R1, 0x0500     # Read back (Should hit L1D/L2 depending on write policy)
+PRINT R1          # Should print 12345
+
+HALT

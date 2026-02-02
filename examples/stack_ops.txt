@@ -1,0 +1,18 @@
+# Stack Operations Test
+# Demonstrates: PUSH, POP, SP
+
+LOAD R0, 10
+LOAD R1, 20
+PUSH R0         # Stack: [10]
+PUSH R1         # Stack: [10, 20] (Top)
+
+LOAD R0, 0      # Clear registers
+LOAD R1, 0
+
+POP R1          # R1 = 20
+PRINT R1
+
+POP R0          # R0 = 10
+PRINT R0
+
+HALT

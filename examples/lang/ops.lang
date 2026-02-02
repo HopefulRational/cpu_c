@@ -1,0 +1,36 @@
+int main() {
+    int x = 10;
+    int y = 20;
+    
+    // <=
+    if (x <= 10) {
+        asm("LOAD R0, 1");
+        asm("PRINT R0");
+    }
+    
+    // >=
+    if (y >= 20) {
+        asm("LOAD R0, 2");
+        asm("PRINT R0");
+    }
+    
+    // !=
+    if (x != y) {
+        asm("LOAD R0, 3");
+        asm("PRINT R0");
+    }
+    
+    // &&
+    if (x == 10 && y == 20) {
+        asm("LOAD R0, 4");
+        asm("PRINT R0");
+    }
+    
+    // ||
+    if (x == 10 || y == 50) {
+        asm("LOAD R0, 5");
+        asm("PRINT R0");
+    }
+    
+    asm("HALT");
+}

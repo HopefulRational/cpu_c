@@ -1,0 +1,13 @@
+# Basic Arithmetic Test
+# Demonstrates: LOAD, ADD, SUB, Registers, PRINT
+
+LOAD R0, 10
+LOAD R1, 20
+ADD R0, R1      # R0 = 30
+PRINT R0
+
+LOAD R7, 50
+SUB R7, R0      # R7 = 50 - 30 = 20
+PRINT R7
+
+HALT

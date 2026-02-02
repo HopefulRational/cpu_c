@@ -1,0 +1,37 @@
+# Interrupt Test Program
+# Initializes R1 as counter and loops.
+# Start Address: 0x0100 (256)
+
+# 256: LOAD R1, 0
+LOAD R1, 0
+# 260: LOAD R5, 1
+LOAD R5, 1
+# 264: LOAD R6, 100
+LOAD R6, 100
+
+# LOOP: (Address 268)
+# 268: ADD R1, R5
+ADD R1, R5
+# 271: PRINT R1
+PRINT R1
+
+# 273: MOV R2, R1
+MOV R2, R1
+# 276: MOV R3, R2
+MOV R3, R2
+# 279: MOV R4, R3
+MOV R4, R3
+
+# 282: MOV R7, R6
+MOV R7, R6
+# 285: SUB R7, R1
+SUB R7, R1
+# 288: JZ 294 (EXIT)
+JZ 294
+
+# 291: JMP 268 (LOOP)
+JMP 268
+
+# EXIT: (Address 294)
+# 294: HALT
+HALT

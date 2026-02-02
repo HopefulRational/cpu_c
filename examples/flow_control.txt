@@ -1,0 +1,15 @@
+# Flow Control Test
+# Demonstrates: JMP, JZ (Loop)
+# Counts down from 5 to 0
+
+LOAD R0, 5
+LOAD R1, 1
+
+# Loop Start (0x0108)
+SUB R0, R1      # Decrement
+PRINT R0        # Print current value
+JZ 0x0113       # If 0, Jump to HALT (0x0113)
+JMP 0x0108      # Jump back to Loop Start
+
+# End (0x0113)
+HALT

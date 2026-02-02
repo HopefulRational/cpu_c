@@ -1,0 +1,25 @@
+// Fibonacci Sequence Example
+// Calculates the nth Fibonacci number recursively
+
+int fib(int n) {
+    if (n < 2) {
+        return n;
+    }
+    return fib(n - 1) + fib(n - 2);
+}
+
+int main() {
+    int n = 10;
+    int result = 0;
+    
+    result = fib(n);
+    
+    // Print result (assuming R1 is used for print arg in asm hack)
+    // or just leave it in memory/register
+    asm("MOV R1, R5"); // Just moving BP to R1 to inspect? No.
+    // The result is in R0 from function return.
+    // Let's print it.
+    asm("PRINT R0");
+    
+    asm("HALT");
+}

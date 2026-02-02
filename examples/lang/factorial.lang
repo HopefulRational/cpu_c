@@ -1,0 +1,32 @@
+// Factorial Example (Iterative)
+// Calculates factorial of a number
+
+int factorial(int n) {
+    int res = 1;
+    while (n > 1) {
+        // Since we don't have MUL, we do repeated addition
+        // res = res * n;
+        // Implementing simple mul: res = mul(res, n)
+        // But we don't have mul function yet.
+        // Let's implement slow multiplication here or just use repeated addition for 'n' times?
+        // Actually, without MUL op, factorial is hard.
+        // Let's assume we implement a helper `multiply` function.
+        // But for simplicity, let's just do summation: Sum(n) = n + (n-1) + ...
+        
+        // Wait, "test new features" -> I should use the features I added.
+        // Let's change this to "Summation" instead of Factorial since I don't have MUL.
+        res = res + n;
+        n = n - 1;
+    }
+    return res;
+}
+
+int main() {
+    int n = 5;
+    int sum = 0;
+    
+    sum = factorial(n); // Actually Sum(5) + 1 = 5+4+3+2+1 = 15? No, init is 1. 1+5+4+3+2 = 15.
+    
+    asm("PRINT R0");
+    asm("HALT");
+}

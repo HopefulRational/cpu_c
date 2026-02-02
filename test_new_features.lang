@@ -1,0 +1,21 @@
+int g_var = 50;
+
+int sub(int a, int b) {
+    return a - b;
+}
+
+int main() {
+    int x = 10;
+    int y = 20;
+    int res = 0;
+
+    if (x < y) {
+        res = sub(y, x);
+    }
+    
+    if (res > 5) {
+        g_var = g_var + res;
+    }
+    
+    asm("HALT");
+}

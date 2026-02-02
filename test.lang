@@ -1,0 +1,18 @@
+int main() {
+    int x = 10;
+    int y = 20;
+    int z = 0;
+    
+    if (x == 10) {
+        z = x + y;
+    }
+    
+    int* ptr = 500;
+    *ptr = z;
+    
+    asm("LOAD R0, 500"); // Verify by loading from 500
+    asm("LDI R1, R0");   // R1 = MEM[500] (should be 30)
+    asm("PRINT R1");     // Should print 30
+    
+    asm("HALT");
+}

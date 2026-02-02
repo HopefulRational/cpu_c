@@ -1,0 +1,19 @@
+# Test LDI/STI
+# R1 = 1000 (Target Address)
+LOAD R1, 1000
+# R2 = 55 (Value)
+LOAD R2, 55
+
+# Store 55 at address 1000
+STI R2, R1
+
+# Clear R2
+LOAD R2, 0
+
+# Load from address 1000 into R3
+LDI R3, R1
+
+# R3 should be 55
+PRINT R3
+
+HALT
