@@ -1,4 +1,4 @@
-# CPU Virtualization Project (C Version)
+# Simple CPU Virtualization Project
 
 ## Overview
 This project implements a simple virtual CPU emulator in C. It simulates a basic Register-based architecture with a custom instruction set. This allows running binary programs in a controlled virtual environment, demonstrating the basics of CPU virtualization.
