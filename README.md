@@ -88,7 +88,7 @@ See `compiler/README.md` for full details.
 ## File Structure
 
 ```
-virt-proj/cpu_c/
+cpu_c/
 ├── Makefile              # Build script
 ├── README.md             # Project documentation
 ├── DETAILS.md            # Implementation details
